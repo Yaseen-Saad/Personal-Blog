@@ -1,0 +1,193 @@
+@import url(./home.css);
+@import url(./about.css);
+@import url(./posts.css);
+@import url(./login.css);
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Space+Mono:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+:root {
+  --mainColor: rgba(255, 166, 0, 0.572);
+}
+body {
+  min-height: 100vh;
+  position: relative;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Fjalla One", sans-serif;
+  font-family: "Space Mono", monospace;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6rem;
+  top: 0;
+}
+header,
+h2 {
+  font-family: "Fjalla One", sans-serif;
+}
+*:not(input) {
+  text-transform: capitalize;
+}
+
+#loadder {
+  width: 100vw;
+  position: fixed;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  display: none !important
+  ;
+  background-color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000;
+}
+
+#loadder.active {
+  display: flex;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input:focus {
+  outline: 0;
+}
+
+body > * {
+  max-width: 1400px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 5%;
+}
+
+main {
+  margin-top: 100px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav ul,
+nav > div {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+  list-style-type: none;
+}
+
+nav > div {
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > div ul {
+  justify-content: space-around;
+  width: -webkit-fill-available;
+  height: 100%;
+  width: fill-available;
+  transition: 0.5s ease-in-out;
+  border-right: 1px solid rgba(0, 0, 0, 0.115);
+}
+
+svg {
+  height: 50px;
+  cursor: pointer;
+}
+
+ul li a[href="#"] {
+  padding-bottom: 10px;
+  border-bottom: var(--mainColor) 3px solid;
+}
+
+nav > div div {
+  width: 0;
+  overflow: clip;
+  border: 1px solid transparent;
+  height: 0;
+  box-sizing: content-box;
+  transition: 0.5s ease-in-out;
+}
+
+nav > div div.active {
+  height: 100%;
+  border-right: 1px solid rgba(0, 0, 0, 0.115);
+  width: 35px;
+  padding-inline: 30px;
+}
+
+ul.social li svg {
+  transition: 0.2s ease-in-out;
+}
+
+ul.social li:hover svg {
+  transform: translateY(-5px);
+}
+
+ul.social li:nth-child(1):hover svg {
+  fill: #4fc35d;
+}
+
+ul.social li:nth-child(2):hover svg {
+  fill: #3b5998;
+}
+
+ul.social li:nth-child(3):hover svg {
+  fill: #0077b5;
+}
+
+ul.social li:nth-child(4):hover svg {
+  fill: #c71610;
+}
+.footer {
+  display: none;
+}
+.toTop {
+  position: fixed;
+  right: 10px;
+  width: fit-content;
+  transition: 0.2s ease-in-out;
+  padding: 0;
+  height: fit-content;
+  top: 100%;
+}
+.toTop.active {
+  top: calc(100% - 70px);
+}
+
+nav .links {
+  width: 100%;
+}
+.footer {
+  display: flex;
+  border-top: 3px solid var(--mainColor);
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer > article {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  min-width: 300px;
+  padding-top: 30px;
+  width: 50%;
+}
+.footer .social {
+  display: flex;
+  margin-top: 20px;
+  list-style-type: none;
+  justify-content: space-evenly;
+  width: 70%;
+  width: 300px;
+}
